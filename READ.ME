@@ -1,0 +1,25 @@
+## Pre-Requisites
+•Application is based on .Net 5
+•RabbitMQ is used for message queue , will need to be installed before running. 
+•RabbitMQ connection configuration can be updated in appsettings.json file.
+
+## Solution Details
+   Solution consists of 2 main projects
+   Chat API – which pushed messages to RabbitMQ 
+      Exposes one end point ChatRequest which pushes chats to queue
+      ChatSessionAgentCoordinator – consists of.
+	Chat session Monitor - Listens for incoming new chat session request
+	AgentManagerService – which provide next available agent to be assigned to incoming chat
+	ShiftManager – 
+	   Persist chats from RabbitMQ to some persistent storage
+	   Check and trigger overflow if required
+	   Keep track of active hrs
+   	Exposes 2 end point 
+	    Assign new Team Agents – Assign the provide group of agent as active team shift 
+	    Get Active Team  Agents – Return list of active agent with current state of Session Assigned 
+
+## How to use
+•Configure solution to multiple projects which will result in 2 API windows exposing the above mentioned end points
+•Use active team  assignment endpoint to set the active agents team before pushing any messages 
+•Chat API  chat request endpoint will be the message to the queue 
+•Get active team endpoint will provide with current state of agents session assignment at any given point (in case of overflow being triggered, this call will return addition 2 overflow agents details as part of result as well)

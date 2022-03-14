@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3BDB7B98-2417-418B-92B2-C070FD716ADD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{2DFD960B-075F-4936-BEEA-358060EF2069}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAcccessLayer", "src\common\DataAcccessLayer\DataAcccessLayer.csproj", "{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueuePublishers", "src\common\QueuePublishers\QueuePublishers.csproj", "{D01D2665-2C2E-43B8-96B2-F23A441E7F19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueSubscribers", "src\common\QueueSubscribers\QueueSubscribers.csproj", "{D59551AD-517F-4404-892F-B1F9EA8B1AEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{9DB7B331-5D8C-4640-83B4-C14847385F19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatAPI", "src\services\ChatAPI\ChatAPI.csproj", "{0737525D-4F84-4FE8-A3E6-B053E308888E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgentChatCoordinator", "src\services\AgentChatCoordinator\AgentChatCoordinator.csproj", "{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BDCB6ADC-D5C8-42FB-B90D-36459C94BC95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerChatSupportTests", "tests\CustomerChatSupportTests\CustomerChatSupportTests.csproj", "{173F1A79-0732-4730-8A44-D219AB8CC02B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{53779BB5-58E6-43D2-9A5C-C7F9BF1F1E57}"
+	ProjectSection(SolutionItems) = preProject
+		resources\Assignment.pdf = resources\Assignment.pdf
+		resources\flow.png = resources\flow.png
+		resources\psuedo.txt = resources\psuedo.txt
+		resources\ToDos.txt = resources\ToDos.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D01D2665-2C2E-43B8-96B2-F23A441E7F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01D2665-2C2E-43B8-96B2-F23A441E7F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01D2665-2C2E-43B8-96B2-F23A441E7F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01D2665-2C2E-43B8-96B2-F23A441E7F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59551AD-517F-4404-892F-B1F9EA8B1AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59551AD-517F-4404-892F-B1F9EA8B1AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59551AD-517F-4404-892F-B1F9EA8B1AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59551AD-517F-4404-892F-B1F9EA8B1AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0737525D-4F84-4FE8-A3E6-B053E308888E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0737525D-4F84-4FE8-A3E6-B053E308888E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0737525D-4F84-4FE8-A3E6-B053E308888E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0737525D-4F84-4FE8-A3E6-B053E308888E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{173F1A79-0732-4730-8A44-D219AB8CC02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173F1A79-0732-4730-8A44-D219AB8CC02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173F1A79-0732-4730-8A44-D219AB8CC02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173F1A79-0732-4730-8A44-D219AB8CC02B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DFD960B-075F-4936-BEEA-358060EF2069} = {3BDB7B98-2417-418B-92B2-C070FD716ADD}
+		{9AD649D8-068E-4DEA-B6D0-9DD6F93BD2C8} = {2DFD960B-075F-4936-BEEA-358060EF2069}
+		{D01D2665-2C2E-43B8-96B2-F23A441E7F19} = {2DFD960B-075F-4936-BEEA-358060EF2069}
+		{D59551AD-517F-4404-892F-B1F9EA8B1AEA} = {2DFD960B-075F-4936-BEEA-358060EF2069}
+		{9DB7B331-5D8C-4640-83B4-C14847385F19} = {3BDB7B98-2417-418B-92B2-C070FD716ADD}
+		{0737525D-4F84-4FE8-A3E6-B053E308888E} = {9DB7B331-5D8C-4640-83B4-C14847385F19}
+		{6A070EBE-4E3E-4208-94BD-6DDD54C9ECF0} = {9DB7B331-5D8C-4640-83B4-C14847385F19}
+		{173F1A79-0732-4730-8A44-D219AB8CC02B} = {BDCB6ADC-D5C8-42FB-B90D-36459C94BC95}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A4C3293-930C-46CB-8A21-849480D6E6B3}
+	EndGlobalSection
+EndGlobal

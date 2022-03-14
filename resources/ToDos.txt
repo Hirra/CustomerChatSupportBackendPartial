@@ -1,0 +1,10 @@
+
+
+. Array or Linked list for active sessions
+. All Ids will be Guid 
+. Agent signouts
+. move API calls outside of AgentSessionCoordinator
+. Shifts timings
+. office hrs (3 shift 8 hrs seems like 24hr service)
+. Polling of the active chats
+. integration test

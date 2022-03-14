@@ -1,0 +1,87 @@
+ChatAPI ()
+{
+	CreateChatSession()
+	{
+		ShiftManager.ShouldRefuseChat()
+			return notOK
+			
+		pushNewChatToQueue()
+		return OK;
+	}
+	
+	PolActiveChat()?? 
+}
+
+ChatAgentCoordinator   - QueueConsumer
+{
+	AssignChatToAgent ()
+	{		
+		ChatID MovingNewChatTochatsAccepted,withStatusInProgress;
+		agent = ShiftManager.ShiftTeam.orderBySeniortyDesc.OrderByActiveSessonDesc.Top1
+		
+		agent.ActiveSession.Add(ChatID)
+		Chat.AssignAgent(Agent.ID) 
+	} 
+}
+
+
+ShiftManager
+{
+	OfficeHoursStart
+	OfficesHoursEnd 
+	OverflowKickedIn
+	
+	ShiftCapacity => ShiftTeamCapacityCalculute();
+	
+	ShiftTeam = ActiveAgentsList();
+	
+	AsssignTeam(AgentsList newShiftTeam);
+	RefuseChat()
+	{
+		!ShiftCapacityisFull() && !OverflowKickedIn
+			CanKickInOverflow()
+				TriggerOverFlow()
+					return true;
+		
+		return false;
+	};
+	
+	ShiftCapacityisFull {
+		GetActiveSessionCountFromDB >= ShiftCapacity
+	}
+	
+	CanKickInOverflow()
+	{
+		If(CurrentDateTime <OfficesHoursEnd)
+			return true
+			
+		return false
+	}
+	
+	TriggerOverFlow ()
+	{
+		ShiftTeam.Add (GetOverflowTeam());
+		UpdateShiftCapacity //May b not
+	}
+	
+	GetOverflowTeam()
+	{
+		GetoverflowTeamAgents from somewhere
+	} 
+}
+
+Agent 
+{
+	Name
+	Shift  [Morning Envening Night]
+		
+	Seniorty
+	ChatSessionQueue ActiveSessions ;
+}
+
+Shift 
+{
+	Type Morning | Evening | Night
+	Time StartAt
+	Time EndAt
+}
